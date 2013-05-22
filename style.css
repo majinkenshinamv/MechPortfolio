@@ -14,37 +14,43 @@ html, body{
     padding: 0px;
     background-image: url('Crosshatch 2.png');
     color: #555555;
-    height: 100%;
+    height: 100%;    
 }
 h2
 {
-    font-family: "Lucida Console", 'Courier New', Arial;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 26px;
     color: #7e7e7e;
     font-weight: normal;
+    text-shadow: 2px 2px 3px #1c1c1c;
+}
+p
+{
+    font-family: 'Share Tech', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    color: #aaaaaa;
 }
 
+.header, .footer
+{
+    background-color: rgba(33, 33, 33, .85);
+    height: 90px;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 5;
+}
 .header
 {
     width: 100%;
-    height: 90px;
-    background-color: #1D1D1D;
     border-bottom: 3px solid #FF7F00;
-    left: 0;
-    right: 0;
     top: 0;
-    position: fixed;
-    z-index: 5;
 }
 
 .footer
 {
-    height: 90px;
-    background-color: #1D1D1D;
-    position: fixed;
-    left: 0;
-    right: 0;
     bottom: 0;
-    z-index: 5;
 }
 .nav-links li
 {
@@ -59,7 +65,7 @@ h2
 }
 .nav-links
 {
-    font-family: 'OCR A';
+    font-family: 'Share Tech', sans-serif;
     font-size: 26px;
     padding-top: 20px;
 }
@@ -90,8 +96,8 @@ h2
 .section
 {
    float: left;
-   padding: 10px;
-   width: 900px;
+   width: 960px;
+   margin-left: 50px;
 }
 
 .panel
@@ -112,10 +118,9 @@ h2
 {
     position: relative;
     float: left;
-    padding: 10px;
-    width: 310px;
+    padding: 0px 15px;
+    width: 300px;
     height: 420px;
-    border: solid red 1px;
     /*background-color: #363636;*/
 }
 .side-panel-bottom
@@ -125,9 +130,25 @@ h2
     margin-left: 10px;
     height: 110px;
     width: 310px;
-    padding: 40px 0px 10px;
-    border: solid blue 1px;
+    padding: 65px 5px 10px;
     /*background-color: #1F1F1F;*/
+}
+
+.portfolio-link
+{
+    float: left;
+    height: 25px;
+    width: 150px;
+    padding: 5px;
+    background-color: #1D1D1D;
+    color: #d56c04;
+    font-size: 20px;
+    font-family: 'Share Tech Mono', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-left: 65px;
+    margin-top: 10px;
 }
 .tag
 {
@@ -137,9 +158,11 @@ h2
     height: 15px;
     padding: 5px;
     font-size: 18px;
-    font-family: "Lucida Console", 'Courier New', Arial;
+    font-family: 'Share Tech', sans-serif;
+    font-weight: bold;
     margin-left: 10px;
     margin-top: 10px;
+    vertical-align: central;
 }
 
 tr
@@ -160,7 +183,7 @@ td
 
 ::-webkit-scrollbar {
  width: 10px;
- height: 1px;
+ height: 2px;
  z-index: 6;
 }
 ::-webkit-scrollbar-button:start:decrement,

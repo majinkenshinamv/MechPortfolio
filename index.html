@@ -2,11 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Jimmy Cleveland</title>
     </head>
     <body>
-
         <!-- nav-bar -->
         <div class="header">
             <div class="nav-links">
@@ -19,25 +20,25 @@
         </div><!-- /nav-bar -->
         <!-- container -->
         <div id="container">
-
             <!-- panel-wrapper -->
             <div class="panel-wrapper">
-
                 <div id="home" class="section">
                     <h3>Herro, I'm Sir Jimmy Cleveland</h3>
                     <p>lorem ipsum dolor monayaer...</p>
                 </div>
+                <div id="portfolio" class="section" style="width: 2000px; margin-top: -30px;">
 
-                <div id="portfolio" class="section" style="width: 2000px;">
-                  
                     <div class="panel">
                         <div class="image-panel">
-                            <img src="mediaplayer1.png" alt="mediaplayer1" height="300" width="570" style="margin-top: 35px; margin-left: 5px;"/>
-                            <img src="mediaplayer2.png" alt="mediaplayer2" style="margin-top: 20px; margin-left: 5px;"/>
-                            <img src="mediaplayer3.png" alt="mediaplayer3" style="margin-top: 20px; margin-left: 20px;"/>
+                            <img src="mediaplayer1.png" alt="mediaplayer1" height="300" width="570" style="margin-top: 35px; margin-left: 5px;" />
+                            <img src="mediaplayer2.png" alt="mediaplayer2" style="margin-top: 20px; margin-left: 5px;" />
+                            <img src="mediaplayer3.png" alt="mediaplayer3" style="margin-top: 20px; margin-left: 20px;" />
                         </div>
                         <div class="side-panel-top">
                             <h2>Office Media Player</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet felis eros. Pellentesque scelerisque dolor ut est rhoncus sit amet                                        placerat tellus congue. Suspendisse felis tellus, accumsan iaculis elementum non, euismod et mi. Nulla cursus accumsan erat, at placerat nulla                                      placerat quis. Quisque non elit nec ligula feugiat pellentesque eu et quam. Nam gravida, enim id fermentum dictum, urna nibh sodales mauris, eget                                   porttitor nulla mi.
+                            </p>
+                            <a class="portfolio-link" href="#">VISIT</a>
                         </div>
                         <div class="side-panel-bottom">
                             <div class="tag">Photoshop</div>
@@ -48,24 +49,23 @@
                         </div>
                     </div>
                 </div>
-
                 <div id="contact" class="section">
                     <h3>Contact Info</h3>
                 </div>
-                
+
             </div><!-- /panel-wrapper -->
         </div><!-- /container -->
-
         <!-- footer -->
         <div class="footer">
         </div><!-- /footer -->
-
         <!-- Scripts -->
-        <script type='text/javascript' src="jquery-1.9.1.min.js"></script>
-        <script type='text/javascript' src="jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="jquery.mousewheel.js"></script>
         <script>
 
 
+            
+            
             $(".nav-links li").on("click", function () {
                 var width = 400 // Width of each section
                 var index = $(this).index();
@@ -74,7 +74,7 @@
                 $(".nav-links li").removeClass('active');
                 $(this).addClass('active');
             });
-
+            
             // jquery mousewheel scroll horizontal
             $(document).ready(function () {
                 $('#container')
