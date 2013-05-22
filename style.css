@@ -1,2 +1,115 @@
-body {
+/********************************
+    Author  :   Jimmy Cleveland
+    Site    :   Portfolio
+   ____________________________
+    
+    Colors{
+        Orange  : #FF7F00;
+        NavGray : #1D1D1D;
+    }      
+********************************/
+
+html, body{
+    margin: 0;
+    padding: 0px;
+    background-image: url('Crosshatch 2.png');
+    color: #555555;
+    height: 100%;
+}
+
+.nav-bar
+{
+    width: 100%;
+    height: 90px;
+    background-color: #1D1D1D;
+    border-bottom: 3px solid #FF7F00;
+}
+
+.nav-links li
+{
+    list-style-type: none;
+    display: inline;
+    margin-left: 50px;
+}
+.nav-links a 
+{
+    color: #555555;
+    text-decoration: none;
+}
+.nav-links a.active
+{
+    color:  #FF7F00;
+}
+.nav-links
+{
+    font-family: 'OCR A';
+    font-size: 26px;
+    padding-top: 20px;
+}
+
+#container
+{
+    margin-top: 40px;
+    padding-bottom: 22px;
+    overflow: scroll;
+    overflow-y: hidden;
+    height: 700px;
+}
+
+.panel-wrapper
+{
+    position:  relative;
+    left: 0;
+    width: 3000px;
+    height: 100%;
+}
+
+.panel
+{
+    height: 100%;
+    float: left;
+    padding: 10px;
+    border: solid red 1px;
+}
+
+table
+{
+    border: 1px solid white;
+}
+tr
+{
+    height: 500px;
+}
+td
+{
+    padding-right: 100px;
+}
+.portfolio-panel
+{
+    height: 500px;
+    width: 700px;
+    background-color: #353535;
+}
+
+
+.footer
+{
+    height: 90px;
+    background-color: #1D1D1D;
+}
+
+
+::-webkit-scrollbar {
+ width: 10px;
+ height: 2px;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment  {
+ display: none;
+}
+::-webkit-scrollbar-track-piece  {
+ background-color: #222222;
+}
+::-webkit-scrollbar-thumb:horizontal {
+ background: #FF7F00;
 }

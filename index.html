@@ -2,21 +2,92 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Jimmy Cleveland</title>
     </head>
     <body>
 
-        <!-- Navbar -->
-        <div class="navbar">
-            <div class="navlinks">
+        <!-- nav-bar -->
+        <div class="nav-bar">
+            <div class="nav-links">
                 <ul>
-                    <li>Home</li>
-                    <li>Portfolio</li>
-                    <li>Contact</li>
+                    <li><a class="active" href="#" onclick="goto('#home', this); return false">Home</a></li>
+                    <li><a href="#" onclick="goto('#portfolio', this); return false">Portfolio</a></li>
+                    <li><a href="#" onclick="goto('#contact', this); return false">Contact</a></li>
                 </ul>
             </div>
-        </div>
-        <!-- /Navbar -->
+        </div><!-- /nav-bar -->
+        <!-- container -->
+        <div id="container">
+
+            <!-- panel-wrapper -->
+            <div class="panel-wrapper">
+
+                <div id="home" class="panel">
+                    <h3>Herro, I'm Sir Jimmy Cleveland</h3>
+                    <p>lorem ipsum dolor monayaer...</p>
+                </div>
+
+                <div id="portfolio" class="panel">
+                    <table>
+                        <tr>
+                            <td>
+                            <div class="portfolio-panel">
+                        
+                            </div>
+                            </td>                            
+                            <td>
+                            <div class="portfolio-panel">
+                    
+                            </div>
+                            </td>
+                        </tr>
+                    </table>         
+                  </div>
+
+                <div id="contact" class="panel">
+                    <h3>Contact Info</h3>
+                </div>
+                
+            </div><!-- /panel-wrapper -->
+        </div><!-- /container -->
+
+        <!-- footer -->
+        <div class="footer">
+        </div><!-- /footer -->
+
+        <!-- Scripts -->
+        <script type='text/javascript' src="jquery-1.9.1.min.js"></script>
+        <script type='text/javascript' src="jquery.mousewheel.js"></script>
+        <script>
+
+            // jquery mousewheel scroll horizontal
+            $(document).ready(function(){
+                $('#container')
+                .bind('mousewheel', function(event, delta) {
+                    val = this.scrollLeft - (delta * 600);
+                    jQuery(this).stop().animate({scrollLeft:val},400);
+                    event.preventDefault();
+                });
+            });
+
+            //$(function () {
+            //    $("#container").mousewheel(function (event, delta) {
+            //        this.scrollLeft -= (delta * 30);
+            //        event.preventDefault();
+            //    });
+            //});
+
+            function goto(id, t) {
+                // animate to div #
+                $(".panel-wrapper").animate({ "left": -($(id).position().left) }, 600);
+
+                // remove "active" class from all nav-links
+                $('.nav-links a').removeClass('active');
+
+                // add "active" class to current nav-link
+                $(t).addClass('active');
+            }
+        </script>
     </body>
 </html>
