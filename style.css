@@ -45,13 +45,9 @@ html, body{
     list-style-type: none;
     display: inline;
     margin-left: 50px;
+    cursor: pointer;
 }
-.nav-links a 
-{
-    color: #555555;
-    text-decoration: none;
-}
-.nav-links a.active
+.nav-links li.active
 {
     color:  #FF7F00;
 }

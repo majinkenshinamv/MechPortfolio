@@ -11,9 +11,9 @@
         <div class="header">
             <div class="nav-links">
                 <ul>
-                    <li><a class="active" href="#" onclick="goto('#home', this); return false">Home</a></li>
-                    <li><a href="#" onclick="goto('#portfolio', this); return false">Portfolio</a></li>
-                    <li><a href="#" onclick="goto('#contact', this); return false">Contact</a></li>
+                    <li id="home" class="active">Home</li>
+                    <li id="portfolio">Portfolio</li>
+                    <li id="contact">Contact</li>
                 </ul>
             </div>
         </div><!-- /nav-bar -->
@@ -48,33 +48,39 @@
         <script type='text/javascript' src="jquery.mousewheel.js"></script>
         <script>
 
+
+            $(".nav-links li").on("click", function () {
+                var width = 400 // Width of each section
+                var index = $(this).index();
+                var position = width * index;
+                $("#container").animate({ scrollLeft: position });
+                $(".nav-links li").removeClass('active');
+                $(this).addClass('active');
+            });
+
             // jquery mousewheel scroll horizontal
-            $(document).ready(function(){
+            $(document).ready(function () {
                 $('#container')
-                .bind('mousewheel', function(event, delta) {
+                .bind('mousewheel', function (event, delta) {
                     val = this.scrollLeft - (delta * 600);
-                    jQuery(this).stop().animate({scrollLeft:val},400);
+                    jQuery(this).stop().animate({ scrollLeft: val }, 400);
                     event.preventDefault();
                 });
             });
-
             //$(function () {
             //    $("html, body, *").mousewheel(function (event, delta) {
             //        this.scrollLeft -= (delta * 30);
             //        event.preventDefault();
             //    });
             //});
-
-            function goto(id, t) {
-                // animate to div #
-                $(".panel-wrapper").animate({ "left": -($(id).position().left) }, 600);
-
-                // remove "active" class from all nav-links
-                $('.nav-links a').removeClass('active');
-
-                // add "active" class to current nav-link
-                $(t).addClass('active');
-            }
+            //function goto(id, t) {
+            //    // animate to div #
+            //    $(".panel-wrapper").animate({ "left": -($(id).position().left) }, 600);
+            //    // remove "active" class from all nav-links
+            //    $('.nav-links a').removeClass('active');
+            //    // add "active" class to current nav-link
+            //    $(t).addClass('active');
+            //}
         </script>
     </body>
 </html>
